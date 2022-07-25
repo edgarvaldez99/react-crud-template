@@ -4,6 +4,8 @@ import PostList from './posts/screens/PostList';
 import PostForm from './posts/screens/PostForm';
 import Layout from './shared/Layout';
 import TodoList from './todos/screens/TodoList';
+import Sandbox from './TypeSripct/Sandbox';
+import PostTodo from './todos/screens/PostTodo';
 
 function Router() {
   return (
@@ -16,7 +18,11 @@ function Router() {
             <Route path="new" element={<PostForm />} />
             <Route path=":id" element={<PostForm />} />
           </Route>
-          <Route path="todos" element={<TodoList />} />
+          <Route path="todos">
+            <Route index element={<TodoList />} />
+            <Route path="new" element={<Sandbox />} />
+            <Route path=":id" element={<PostTodo />} />
+          </Route>
         </Route>
       </Routes>
     </BrowserRouter>

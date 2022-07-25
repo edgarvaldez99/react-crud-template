@@ -12,3 +12,9 @@ export interface Todo {
   title: string;
   completed: boolean;
 }
+export interface TodoCreateDto {
+  title: string;
+  completed: boolean;
+}
+
+export interface TodoUpdateDto extends Partial<TodoCreateDto> {}
