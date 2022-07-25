@@ -51,6 +51,7 @@ export default function Form(props: FormProps) {
           id="title"
           name="title"
           label="title"
+          margin='normal'
           value={formik.values.title}
           onChange={formik.handleChange}
           error={formik.touched.title && Boolean(formik.errors.title)}
@@ -61,6 +62,7 @@ export default function Form(props: FormProps) {
           id="body"
           name="body"
           label="body"
+          margin='normal'
           value={formik.values.body}
           onChange={formik.handleChange}
           error={formik.touched.body && Boolean(formik.errors.body)}
