@@ -1,8 +1,8 @@
 import React from 'react';
-import Button from '@mui/material/Button';
+import Router from './Router';
 
 function App() {
-  return <Button variant="contained">Hello World</Button>;
+  return <Router />;
 }
 
 export default App;
